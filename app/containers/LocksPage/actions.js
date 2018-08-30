@@ -19,10 +19,13 @@ export function onGetUserLocksSuccess(data) {
 }
 
 
-export function onLockUnlockRequest(id) {
+export function onLockUnlockRequest(id, name) {
   return {
     type: LOCK_UNLOCK_REQUEST,
-    id
+    payload: {
+      id,
+      name
+    }
   };
 }
 

@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import kisiRequest from 'utils/kisiRequest';
-
+import { globalNotification } from 'containers/App/actions';
 import { onGetUserDetailsSuccess } from './actions';
 
 import { GET_USER_DETAILS_REQUEST } from './constants';
@@ -11,7 +11,7 @@ function* getUserDetails() {
     yield put(onGetUserDetailsSuccess(userDetails.user));
   } catch (err) {
     console.log(err);
-    // yield put(repoLoadingError(err));
+    yield put(globalNotification('error', err.message));
   }
 }
 

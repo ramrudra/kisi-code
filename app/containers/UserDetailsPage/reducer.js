@@ -10,7 +10,7 @@ const initialState = fromJS({
     name: null,
     email: null
   },
-  locks: []
+  locks: null
 });
 
 function userDetailsReducer(state = initialState, action) {

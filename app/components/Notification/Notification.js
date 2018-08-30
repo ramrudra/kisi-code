@@ -55,7 +55,9 @@ const Notification = (props) => {
   return (
     <Snackbar
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open
+      open={!!message}
+      autoHideDuration={3000}
+      onClose={onClose}
     >
       <SnackbarContent
         className={classNames(classes[variant], className)}

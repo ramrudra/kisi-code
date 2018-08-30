@@ -25,12 +25,13 @@ function* getUserLocks() {
 }
 
 function* lockUnlock(req) {
+  const { payload } = req;
   try {
-    yield call(kisiRequest.post, `/locks/${req.id}/unlock`);
+    yield call(kisiRequest.post, `/locks/${payload.id}/unlock`);
     yield put(onGetUserLocksRequest());
   } catch (err) {
     console.log(err);
-    yield put(globalNotification('error', err.message));
+    yield put(globalNotification('error', `Unlocking ${payload.name} failed`));
   }
 }
 

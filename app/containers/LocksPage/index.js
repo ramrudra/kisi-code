@@ -12,7 +12,7 @@ import LocksPage from './LocksPage';
 
 const mapDispatchToProps = (dispatch) => ({
   onGetUserLocks: () => dispatch(onGetUserLocksRequest()),
-  onLockUnlockRequest: (id) => dispatch(onLockUnlockRequest(id))
+  onLockUnlockRequest: (id, name) => dispatch(onLockUnlockRequest(id, name))
 });
 
 const mapStateToProps = createStructuredSelector({
