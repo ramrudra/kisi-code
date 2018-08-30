@@ -8,9 +8,7 @@ import reducer from './reducer';
 import saga from './saga';
 import UserDetailsPage from './UserDetailsPage';
 
-const mapDispatchToProps = (dispatch) => ({
-
-});
+const mapDispatchToProps = (dispatch) => ({});
 
 const mapStateToProps = createStructuredSelector({
   currentUserData: makeSelectCurrentUser()
