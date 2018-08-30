@@ -17,7 +17,7 @@
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build:clean": "rimraf ./build",
     "start": "cross-env NODE_ENV=development node server",
-    "start:production": "npm run test && npm run build && npm run start:prod",
+    "start:production": "npm run build && npm run start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
     "clean": "npm run test:clean && npm run build:clean",
     "lint": "npm run lint:js",
@@ -30,8 +30,11 @@
     "test:watch": "cross-env NODE_ENV=test jest --watchAll"
   },
   "dependencies": {
+    "@material-ui/core": "^3.0.1",
+    "@material-ui/icons": "^3.0.1",
     "babel-polyfill": "6.26.0",
     "chalk": "^2.3.2",
+    "classnames": "^2.2.6",
     "compression": "1.7.2",
     "cross-env": "^5.1.6",
     "express": "4.16.3",
@@ -41,6 +44,7 @@
     "immutable": "3.8.2",
     "invariant": "2.2.4",
     "ip": "1.1.5",
+    "kisi-client": "^5.0.3",
     "lodash": "^4.17.10",
     "minimist": "1.2.0",
     "prop-types": "15.6.1",

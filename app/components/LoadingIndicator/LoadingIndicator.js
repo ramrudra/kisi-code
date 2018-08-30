@@ -1,17 +1,18 @@
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import './style.scss';
+
+const styles = theme => ({
+  progress: {
+    margin: theme.spacing.unit * 2,
+  },
+});
 
 const LoadingIndicator = () => (
   <div className="loading-indicator">
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
+    <CircularProgress size={50} />
   </div>
 );
 
-export default LoadingIndicator;
+export default withStyles(styles)(LoadingIndicator);

@@ -1,5 +1,5 @@
 /**
- * Asynchronously loads the component for HomePage
+ * Asynchronously loads the component for LocksPage
  */
 import Loadable from 'react-loadable';
 

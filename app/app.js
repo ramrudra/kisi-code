@@ -15,6 +15,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import FontFaceObserver from 'fontfaceobserver';
 import createHistory from 'history/createBrowserHistory';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import 'sanitize.css/sanitize.css';
 
 // Import root app
@@ -29,6 +30,15 @@ import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import 'styles/theme.scss';
 
 import configureStore from './configureStore';
+
+// Custom material Styles
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#6887f0'
+    }
+  }
+});
 
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
@@ -52,7 +62,9 @@ const render = () => {
     <Provider store={store}>
       {/* <LanguageProvider messages={messages}> */}
       <ConnectedRouter history={history}>
-        <App />
+        <MuiThemeProvider theme={theme}>
+          <App />
+        </MuiThemeProvider>
       </ConnectedRouter>
       {/* </LanguageProvider> */}
     </Provider>,

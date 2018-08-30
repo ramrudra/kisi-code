@@ -1,6 +1,7 @@
 /**
- * Asynchronously loads the component for FeaturePage
+ * Asynchronously loads the component for UserDetailsPage
  */
+
 import Loadable from 'react-loadable';
 
 import LoadingIndicator from 'components/LoadingIndicator';
