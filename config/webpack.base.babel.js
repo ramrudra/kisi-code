@@ -94,7 +94,7 @@ module.exports = (options) => ({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       },
-    })
+    }),
   ]),
   resolve: {
     modules: ['app', 'node_modules'],

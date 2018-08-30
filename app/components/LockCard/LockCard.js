@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -63,6 +64,9 @@ class LockCard extends React.Component {
           <CardContent>
             <Typography gutterBottom variant="headline" component="h2">
               {lock.name}
+            </Typography>
+            <Typography gutterBottom variant="caption" component="h2">
+              Created: {moment(lock.created_at).format('D/MM/YYYY, h:mm:ss a')}
             </Typography>
             {lock.unlocked ? (
               <LockOpen style={{ fontSize: 50 }} />
