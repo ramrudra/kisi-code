@@ -2,6 +2,8 @@ import Kisi from 'kisi-client';
 
 const kisiClient = new Kisi();
 
+
+// To be moved to env var
 kisiClient.setLoginSecret('94c2056abb993b570517f2d3a89c9b5a');
 
 export default {
