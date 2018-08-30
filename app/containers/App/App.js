@@ -31,8 +31,8 @@ class App extends React.Component {
     return (
       <div className="app-wrapper">
         <Helmet
-          titleTemplate="%s - React.js Boilerplate"
-          defaultTitle="React.js Boilerplate"
+          titleTemplate="%s - Kisi Challenge"
+          defaultTitle="Kisi Challenge"
         >
           <meta name="description" content="A React.js Boilerplate application" />
         </Helmet>

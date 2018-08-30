@@ -41,7 +41,7 @@ class LocksPage extends React.Component {
         <Helmet>
           <title>Locks Page</title>
           <meta
-            name="description"
+            name="Kisi Challenge"
             content="Locks Page to list current user locks"
           />
         </Helmet>
