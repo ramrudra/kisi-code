@@ -1,10 +1,10 @@
 /* eslint consistent-return:0 */
 
 const express = require('express');
-const logger = require('./util//logger');
+const logger = require('./util/logger');
 
 const argv = require('./util/argv');
-const port = require('./util//port');
+const port = require('./util/port');
 const setup = require('./middlewares/frontendMiddleware');
 const { resolve } = require('path');
 
@@ -30,4 +30,5 @@ app.listen(port, host, (err) => {
     return logger.error(err.message);
   }
   logger.appStarted(port, prettyHost);
+  console.log('App started on: ', `${process.env.HOST} : ${port}`);
 });
